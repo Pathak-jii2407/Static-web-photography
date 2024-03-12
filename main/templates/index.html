@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+{% load static%}
+
+<html>
+<head>
+<title>Static Website</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+*{
+  margin: 0%;
+  padding: 0%;
+}
+
+
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+  height: 100%;
+  color: #777;
+  line-height: 1.8;
+}
+#myNavbar{
+position:fixed;
+transition: 0.31s;
+padding: 5px;
+
+}
+#myNavbar a:hover{
+  transition: 0.31s;
+  text-shadow: 1px 0px 5px rgb(255, 255, 255);
+  font-size: medium;
+  
+}
+
+
+.main{
+  width:100%;
+  height:770px;
+  background-image:url("{%static 'pics/bg_img/1.png' %}");
+  background-size: cover;
+  }
+
+  .text_info{
+    position: relative;
+    top: 120px;
+    left:590px;
+  }
+  .text_info h1{
+    position: relative;
+    top: 520px;
+    left:590px;
+    color: aliceblue;
+  }
+  .text_info h3{
+    position: relative;
+    top: 110px;
+    color: rgb(44, 38, 38);
+  }
+  .blank{
+    width: 100%;
+    height:10px;
+
+  }
+  .pictures{
+    width: 100%;
+    height: 800px;
+    box-shadow: -10px 1px 10px 1px rgb(0, 0, 0);
+
+  }
+
+  .imgs1 img,.imgs2 img{
+    height: 230px;
+    width: 330px;
+    display:flex;
+    float: left;
+    transition: 1s;
+    margin-left: 50px;
+    margin-top: 10px;
+    position: relative;
+    top: 30px;
+    right: 10px;
+  }
+
+
+  #im1:hover{
+    box-shadow:-1px 0px 10px 1px rgb(255, 0, 0),1px 0px 10px 1px rgb(242, 255, 0);
+    transition: 1s;
+
+  }
+
+  #im2:hover{
+    box-shadow:2px 0px 10px 1px rgb(255, 179, 0),-1px 0px 10px 1px rgb(0, 0, 0);
+    transition: 1s;
+  }
+
+  #im3:hover{
+    box-shadow:2px 1px 10px 1px rgb(0, 41, 162),-3px -1px 10px 1px rgb(255, 0, 0);
+    transition: 1s;
+  }
+
+  #im4:hover{
+    box-shadow:2px 0px 10px 1px rgb(177, 174, 174) ;
+    transition: 1s;
+  }
+
+  #im5:hover{
+    box-shadow:0px 0px 10px 1px rgb(255, 255, 255),-2px 0px 10px 1px rgb(255, 3, 3) ;
+    transition: 1s;
+  }
+
+  #im6:hover{
+    box-shadow:0px 0px 10px 1px rgb(255, 255, 255), -2px 0px 10px 1px rgb(0, 0, 0);
+    transition: 1s;
+  }
+
+
+
+  .form_submit{
+    width: 100%;
+    height: 400px;
+    background-color: red;
+  }
+
+</style>
+</head>
+<body>
+
+<div class="fluid-container">
+  <div class="w3-bar" id="myNavbar">
+
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      <i class="fa fa-search"></i>
+    </a>
+  </div>
+</div>
+{% load static%}
+
+<div class="main">
+  <div class="text_info">
+    <h1>~Photography</h1>
+    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br> Saepe incidunt quasi consequatur labore sint, fugit autem quibusdam consequuntur. <br> Facere ea consequuntur temporibus placeat tempora fugit labore amet atque perferendis repudiandae. <br></h3>
+  </div>
+</div>
+
+<div class="blank"></div>
+
+<div class="pictures">
+  <div class="imgs">
+    <div class="imgs1"><img id="im1" src="{%static 'pics\main_img\6.jpg'%}" alt="" width="300" height="300"></div>
+    <div class="imgs1"><img id="im2" src="{%static 'pics\main_img\2.jpg'%}" alt="" width="300" height="300"></div>
+    <div class="imgs1"><img id="im3" src="{%static 'pics\main_img\3.jpg'%}" alt="" width="300" height="300"></div>
+    <div class="imgs2"><img id="im4" src="{%static 'pics\main_img\4.jpg'%}" alt="" width="300" height="300"></div>
+    <div class="imgs2"><img id="im4" src="{%static 'pics\main_img\11.jpg'%}" alt="" width="300" height="300"></div>
+    <div class="imgs2"><img id="im5" src="{%static 'pics\main_img\5.jpg'%}" alt="" width="300" height="300"></div>
+    <div class="imgs2"><img id="im6" src="{%static 'pics\main_img\1.jpg'%}" alt="" width="300" height="300"></div>
+    <div class="imgs2"><img id="im6" src="{%static 'pics\main_img\7.jpg'%}" alt="" width="300" height="300"></div>
+    <div class="imgs2"><img id="im6" src="{%static 'pics\main_img\8.jpg'%}" alt="" width="300" height="300"></div>
+    <div class="imgs2"><img id="im6" src="{%static 'pics\main_img\9.jpg'%}" alt="" width="300" height="300"></div>
+    <div class="imgs2"><img id="im6" src="{%static 'pics\main_img\10.jpg'%}" alt="" width="300" height="300"></div>
+    <div class="imgs2"><img id="im6" src="{%static 'pics\main_img\12.jpg'%}" alt="" width="300" height="300"></div>
+  </div>
+</div>
+<div class="blank"></div>
+
+
+<div class="form">
+  {%include 'form_submittion.html'%}
+
+</div>
+
+
+
+
+{%load static%}
+{%include 'footer.html'%}
+
+</body>
+</html>
